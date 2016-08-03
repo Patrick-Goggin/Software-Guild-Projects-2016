@@ -1,0 +1,772 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13-Jul-2016, 9:12:50 PM
+    Author     : apprentice
+*/
+@font-face {font-family: Boycott;}
+@font-face {font-family: Bebas;}
+
+/* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
+
+#pictureDiv{
+    margin-left:0px;
+    float:left;
+    margin-bottom:15px;
+}
+
+#moviePic{
+    
+}
+
+
+#signIn{
+text-align: left;    
+}
+body #library #noteDiv #note{
+   text-align: left;
+   margin-top:20px;
+   margin-bottom:20px;
+}
+.formDiv{
+       background-color:#fff;
+    color:#b30000;
+/*    border:10px solid #b30000;*/
+    
+  margin-left:0px;
+    width:100%;
+    height:90%;
+    margin-top:0px;
+    overflow-y: auto;
+    padding-left:10px;
+    padding-top:50px;
+    padding-bottom: 10px;
+    padding-right:100px;
+    overflow-x:hidden;
+}
+#searchDiv{
+       background-color:#fff;
+    color:#b30000;
+/*    border:10px solid #b30000;*/
+    
+  margin-left:0px;
+    width:100%;
+    height:90%;
+    margin-top:0px;
+    overflow-y: auto;
+    padding-left:10px;
+    padding-top:50px;
+    padding-bottom: 10px;
+    padding-right:100px;
+    overflow-x:hidden;
+}
+#searchDiv::-webkit-scrollbar {
+    width:12px;
+
+} 
+
+#searchDiv::-webkit-scrollbar-track {
+      background-color: #fff;
+      width:10px;
+} /* the new scrollbar will have a flat appearance with the set background color */
+ #searchDiv::-webkit-scrollbar-track-piece  { 
+     background-color:#fff;
+     width:10px;
+ }
+#searchDiv::-webkit-scrollbar-thumb {
+    width:7px;
+      background-color: #b30000; 
+    
+       border: 2px solid #fff;
+/*    outline: 2px solid red;
+    outline-offset: 15px;  */
+
+} /* this will style the thumb, ignoring the track */
+ 
+#searchDiv::-webkit-scrollbar-button {
+      background-color: #fff;
+      width:10px;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+ 
+#searchDiv::-webkit-scrollbar-corner {
+      background-color: #fff;
+}
+/*#libraryDiv{
+    background-color:#fff;
+    color:#b30000;
+    border:10px solid #b30000;
+    
+  
+    width:100%;
+    height:90%;
+    margin-top:0px;
+    overflow-y: auto;
+}*/
+
+#libraryDiv{  background-color:#fff;
+    color:#b30000;
+/*    border:10px solid #b30000;*/
+    margin-bottom:0px;
+  margin-left:0px;
+    width:100%;
+    height:90%;
+    margin-top:0px;
+    overflow-y: auto;
+    padding-left:10px;
+    padding-top:0px;
+    padding-bottom: 10px;
+    padding-right:100px;
+    overflow-x:hidden;}
+#addDiv{
+       background-color:#fff;
+    color:#b30000;
+/*    border:10px solid #b30000;*/
+    margin-bottom:0px;
+  margin-left:0px;
+    width:100%;
+    height:90%;
+    margin-top:0px;
+    overflow-y: hidden;
+    padding-left:10px;
+    padding-top:0px;
+    padding-bottom: 10px;
+    padding-right:100px;
+    overflow-x:hidden;
+}
+
+.georgyZhuikov{
+    background-color:#061524;
+}
+
+#addDiv h3{
+    margin-top:7px;
+    margin-bottom:3px;
+   text-align: right;
+}
+#addDiv::-webkit-scrollbar {
+    width:12px;
+
+} 
+
+#addDiv::-webkit-scrollbar-track {
+      background-color: #fff;
+      width:10px;
+} /* the new scrollbar will have a flat appearance with the set background color */
+ #addDiv::-webkit-scrollbar-track-piece  { 
+     background-color:#fff;
+     width:10px;
+ }
+#addDiv::-webkit-scrollbar-thumb {
+    width:7px;
+      background-color: #b30000; 
+    
+       border: 2px solid #fff;
+/*    outline: 2px solid red;
+    outline-offset: 15px;  */
+
+} /* this will style the thumb, ignoring the track */
+ 
+#addDiv::-webkit-scrollbar-button {
+      background-color: #fff;
+      width:10px;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+ 
+#addDiv::-webkit-scrollbar-corner {
+      background-color: #fff;
+}
+
+#screenNav{
+   
+    margin-left:0px;
+   margin-right:5%;
+    width:auto;
+    height:5%;
+  margin-top:0px;
+   background-color:#fff;
+   opacity:100;
+   
+}
+.sticky {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  top: 0px;
+}
+#panel{
+    width:100%;
+    height:450px;
+    border-style: solid;
+    border-color: #b30000;
+    border-width: 10px;
+    border-radius:10px;
+    background-color:#FFF;
+    color:#337ab7;
+    padding-top:0px;
+    padding-bottom:0px;
+   
+    margin-left:0px;
+    align-content:center;
+
+
+}
+#libraryDiv::-webkit-scrollbar {
+    width:12px;
+
+} 
+
+#libraryDiv::-webkit-scrollbar-track {
+      background-color: #fff;
+      width:10px;
+} /* the new scrollbar will have a flat appearance with the set background color */
+ #libraryDiv::-webkit-scrollbar-track-piece  { 
+     background-color:#fff;
+     width:10px;
+ }
+#libraryDiv::-webkit-scrollbar-thumb {
+    width:7px;
+      background-color: #b30000; 
+    
+       border: 2px solid #fff;
+/*    outline: 2px solid red;
+    outline-offset: 15px;  */
+
+} /* this will style the thumb, ignoring the track */
+ 
+#libraryDiv::-webkit-scrollbar-button {
+      background-color: #fff;
+      width:10px;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+ 
+#libraryDiv::-webkit-scrollbar-corner {
+      background-color: #fff;
+} 
+#machine{
+    width:80%;
+    height:80%;
+    /*    border-style: solid;*/
+    /*    border-color: #337ab7;*/
+    /*    border-width: 8px;*/
+    border:15px solid #b30000;
+    border-radius:50px;
+    background-color:#ff4d4d;
+    color:#337ab7;
+    padding-left:8px;
+    padding-right:8px;
+    padding-top: 8px;
+    padding-bottom:40px;
+    margin-top:40;
+    margin-left:auto;
+    margin-right:auto;
+}
+body{
+    text-align: center;
+    color:#337ab7;
+    font-family: Bebas;
+}
+
+#screenNav hr{
+    width:100%;
+    padding-left:0px;
+    background-color:#00b359;
+
+}
+#c{
+    width:70%;
+}
+#priceDiv{
+    
+}
+/* #choiceButton a:hover{
+    background-color:#FF6140
+}*/
+#choiceButton:hover{
+    background-color:#FF6140
+}
+
+#right{
+    margin-right:0px;
+    float:right;
+
+   
+}
+ #nameDiv{
+      
+        margin-bottom:0px;
+    }
+#moneyDiv{
+    width:200px;
+    height:100px;
+    margin-left:55%;
+    margin-top:5%;
+    float:right;
+    /*    float: right;*/
+    border-style:solid; 
+    background-color: #fff;
+    border-color:#1affa3;
+    border-width:10px;
+    text-decoration-color: #1affa3;
+    text-decoration-style: none;
+    font-weight: normal;
+    padding:5px;
+    font-size:3.5em;
+    text-align:center;
+}
+
+#itemDiv{
+    width:200px;
+    height:100px;
+    margin-left:55%;
+    margin-top:5%;
+    float:right;
+    /*    float: right;*/
+    border-style:solid; 
+    background-color: #fff;
+    border-color:#ff6666;
+    border-width:10px;
+    text-decoration-color: #ff6666;
+    text-decoration-style: none;
+    font-weight: normal;
+    padding:5px;
+    font-size:10px;
+    text-align:left;
+}
+
+body #inventoryDiv #itemDiv{
+    font-size:13pt;
+}
+
+#inventoryDiv{
+    width:100%;
+    height:800px;
+    font-size:10px;
+}
+
+#m{
+    float:right;
+    float:bottom;
+    margin-bottom:0px;
+}
+
+#buttons{
+    width:60px;
+    height:auto;
+
+    background-color:#FFF;
+    color:#337ab7;
+    padding:0px;
+
+    margin-top:2px; 
+
+    margin-right:10px;
+    float: right;
+}
+
+#add-Button{
+/*    margin-left:0px;*/
+margin-top:0px;
+}
+
+#buttonDiv{
+    margin-left:15px;
+}
+
+#moneyForm{
+    margin-left:0px;
+    vertical-align:bottom;
+    margin-bottom:0px;
+}
+
+#leftMargin{
+
+    height:500px;
+    width:10%;
+    background-color:#ff4d4d;    
+    padding:0px;
+    padding-bottom:0px;
+    margin-top:2px; 
+    margin-left:auto;
+    margin-right:18px;
+    
+    float: left;
+}
+
+.choiceButton{
+    width:80px;
+    font-size:9pt;
+    height:40px;
+    border-style: solid;
+    border-color: #337ab7;
+    border-width: 3px;
+    background-color:#FFF;
+    color:#337ab7;
+    padding-top:0px;
+    padding-bottom:0px;
+    margin-top:0px; 
+
+    margin-right:0px;
+    margin-bottom:0px;
+
+}
+
+
+
+#bgImg{
+    width:100%;
+    height:100%;
+    z-index:-10;
+/*    background-image: url("http://cdn3-3.kaneva.net/filestore6/3407823/4522446/wallUofUliquor.jpg");*/
+    background-position: 9px -100px;
+    opacity: 0.6;
+}
+
+#pan{
+    width:50%;
+    margin-left: auto;
+    margin-right:auto;
+}
+#stockDiv{
+    
+}
+
+#themiddle{
+    margin-bottom:auto;
+}
+
+#moneyField{
+    margin-left:0px;
+    width:50px;
+}
+
+#dispense{
+    width:150%;
+    height:100px;
+    border-style: solid;
+    border-color: #ff4d4d;
+    border-width: 8px;
+    background-color:#ff4d4d;
+    color:#ff4d4d;
+    padding-top:0px;
+    padding-bottom:0px;
+    margin-top:30px; 
+    margin-left:0px;
+    margin-right:15px;
+    vertical-align:top;
+    margin-bottom:20px;
+
+    float:left;
+}
+
+#header{
+    width:65%;
+    height:30%;
+    border-style: solid;
+    border-color: #b30000;
+    border-radius:10px;
+    border-width: 8px;
+    background-color:#ff4d4d;
+    color:#fff;
+    padding-top:5px;
+    padding-bottom:5px;
+    margin-top:10px;
+    margin-bottom:0px;
+    margin-right:auto;
+    margin-left:auto;
+    font-size:5em;
+    text-decoration-color:#fff;
+    /*    font-size:40pt;*/
+}
+#header h1{
+    color:#fff;
+    font-size:50pt;
+   
+}
+
+
+.nav .nav-tabs li{
+    color:#337ab7;
+    font-family: Bebas;
+    text-decoration-color:#337ab7;
+}
+/*.nav .navbar .nav-pills a{
+    font-size:15px;
+}*/
+a{
+    font-size:110%;
+    text-decoration-style: none;
+    text-decoration: none;
+}
+
+a:link{
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:none;
+}
+
+a:active{
+    text-decoration:none;
+}
+
+.nav-pills a{
+    font-size:100%;
+    text-decoration-style: none;
+    text-decoration: none;
+   
+
+}
+
+
+
+.nav-pills a:link{
+    text-decoration:none;
+}
+
+.nav-pills a:hover{
+    text-decoration:none;
+    background-color:#80ff80;
+}
+
+.nav-pills a:active{
+    text-decoration:none;
+}
+
+.navbar {
+    color:#337ab7;
+    font-family: Bebas;
+    text-decoration-color:#337ab7;
+    width:100%;
+
+}
+
+.nav-tabs {
+    color:#337ab7;
+    font-family: Bebas;
+    text-decoration-color:#337ab7;
+    width:80%;
+}
+.nav {
+    color:#337ab7;
+    font-family: Bebas;
+    text-decoration-color:#337ab7;
+    width:100%;
+}
+.nav .nav-pills{
+    width:80%;
+    text-align: right;
+    align: left;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+.header h1{
+    margin-top:15px;
+    margin-bottom:15px;
+    font-size:100%;
+}
+
+
+
+body h1 {font-family: Bebas;
+         font-style: normal;
+
+         text-align: center;
+         font-weight:normal;
+         color: #337ab7;
+         margin-top:auto;
+         margin-bottom:10px;
+
+         vertical-align: top;
+}
+
+hr #line {
+    color:#337ab7;
+    width:80%;
+    height:5px;
+    background-color: #337ab7;
+    align:left;
+    margin-left:0;
+    text-align:left;
+}
+
+.content{
+    color:#337ab7;
+    font-family: Bebas;
+    width:80%;
+    text-align: left;
+}
+body .content h1{
+    text-align:left;
+    margin-left: 0px;
+}
+
+.container hr {
+    color:#337ab7;
+    width:80%;
+    height:5px;
+    background-color: #337ab7;
+    align:left;
+    margin-bottom:7px;
+    margin-top:0px;
+    margin-left:0;
+    text-align:left;
+}
+
+body hr{
+    color:#337ab7;
+    width:100%;
+    height:4px;
+    background-color: #337ab7;
+    align:left;
+    margin-top:7px;
+    margin-bottom:0px;
+    margin-left:0;
+    text-align:left;
+}
+
+.nav a:link{
+    background-color:#fff;
+}
+
+.navbar{
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+.nav-pills{
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+body ul{
+    margin-bottom:0px;
+    margin-top:0px;
+}
+
+.nav {
+    margin-top:0px;
+    margin-bottom:0px;
+    /*    border-width:5px;
+        border-color:#337ab7;
+           outline: 5px solid #337ab7;
+        outline-offset: -5px;*/
+}
+.content a:link {
+    background-color: #fff;
+    border-color: #337ab7;
+    text-decoration-color: #337ab7;
+    text-decoration-style: none;
+    font-weight: normal;
+
+}
+
+body a:hover{
+    background-color: #fff;
+    border-color: #FF6140;
+    text-decoration-color: #FF6140;
+    text-decoration-style: none;
+    font-weight: normal;
+}
+
+body .nav-pills a:hover{
+    background-color:#99ffbb;
+    color:#194d33;
+}
+
+body a:visited{
+    background-color: #fff;
+    border-color: #337ab7;
+    text-decoration-color: #337ab7;
+    text-decoration-style: none;
+    font-weight: normal;
+}
+
+body a:active{
+    background-color: #00b359;
+    border-color: #337ab7;
+    text-decoration-color: #FF6140;
+    text-decoration-style: none;
+    font-weight: normal;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+#titleDiv{
+    width:30%;
+    margin-left:0px;
+    margin-bottom:4px;
+    border-style:solid;
+    margin-top:15px;
+    background-color: #fff;
+    border-color:#fff;
+    border-radius:10px;
+    border-width:5px;
+    text-decoration-color: #337ab7;
+    text-decoration-style: none;
+    font-weight: normal;
+    padding:5px;
+    text-align:left;
+}
+#dvdhr{
+    height:2px;
+    width:100%;
+    margin-top:3px;
+    margin-bottom:3px;
+}
+#add-funds{
+    font-size:8pt;
+    text-align:left;
+    float:left;
+    align:left;
+    margin-left:0px;
+    width:70px;
+    margin-right:40px;
+    z-index: 999;
+}
+#add-button{
+    text-align:center;
+/*    float:left;*/
+   
+/*    margin-left:0px;*/
+/*    margin-right:40px;*/
+    z-index: 99;
+}
+
+#restock{
+
+    width:200px;
+    height:100px;
+    margin-left:55%;
+    margin-top:5%;
+    float:right;
+    /*    float: right;*/
+    border-style:solid; 
+    background-color: #fff;
+    border-color:#ff6666;
+    border-width:10px;
+    text-decoration-color: #ff6666;
+    text-decoration-style: none;
+    font-weight: normal;
+    padding:5px;
+    font-size:2.5em;
+    text-align:center;
+}
