@@ -5,6 +5,7 @@
  */
 package com.mycompany.capstoneblog.controller;
 
+import com.mycompany.capstoneblog.dao.ArticleDAO;
 import com.mycompany.capstoneblog.dto.Article;
 import java.util.List;
 import javax.inject.Inject;
@@ -25,34 +26,132 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  */
 @Controller
 public class HomeController {
-    
-//    @Inject
-//    public HomeController(DAO dao) {
-//        this.dao = dao;
-//    }
 
-    //private DAO dao;
-    
-@RequestMapping(value={"/mainAjaxPage"}, method=RequestMethod.GET)
- public String displayMainAjaxPage() {
- // This method does nothing except return the logical name of the
- // view component (/jsp/home.jsp) that should be invoked in response
- // to this request.
- return "mainAjaxPage";
- }
+    @Inject
+    public HomeController(ArticleDAO dao) {
+        this.dao = dao;
+    }
+
+    private ArticleDAO dao;
+
+    @RequestMapping(value = {"/staticPages"}, method = RequestMethod.GET)
+    @ResponseBody
+    public List<Article> getStaticPages() {
+        List<Article> activeStaticPages = dao.getAllStaticPages();
+        return activeStaticPages;
+
+    }
+
+    @RequestMapping(value = {"/mainAjaxPage"}, method = RequestMethod.GET)
+    public String displayMainAjaxPage() {
+        // This method does nothing except return the logical name of the
+        // view component (/jsp/home.jsp) that should be invoked in response
+        // to this request.
+        return "mainAjaxPage";
+    }
+
+    @RequestMapping(value = "/removeArticle/{articleID}", method = RequestMethod.DELETE)
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void removeArticle(@PathVariable("articleID") int articleID) {
+        dao.removeArticle(articleID);
+        // This method does nothing except return the logical name of the
+        // view component (/jsp/home.jsp) that should be invoked in response
+        // to this request.
+    }
+
     @RequestMapping(value = {"/home", "/"}, method = RequestMethod.GET)
     public String home(HttpServletRequest req) {
 
         return "home";
     }
-    
+
     @RequestMapping(value = {"/article"}, method = RequestMethod.POST)
     @ResponseBody
     public String addArticle(@RequestBody Article article) {
-        
-        return " \"" + article.getArticleBody()+ "\" ";
-        
+        addHashtags(article);
+        dao.addArticle(article);
+        return "home";
+
     }
+
+    @RequestMapping(value = "/article/{id}", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void putArticle(@PathVariable("id") int id, @RequestBody Article article) {
+        // set the value of the PathVariable id on the incoming Contact object
+        // to ensure that a) the contact id is set on the object and b) that
+        // the value of the PathVariable id and the Contact object id are the
+        // same.
+        article.setArticleID(id);
+        // update the contact
+        dao.editArticle(article);
+    }
+//    @RequestMapping(value = "/library", method = RequestMethod.GET)
+//    @ResponseBody
+//    public List<DVD> getLibrary() {
+//        // get all of the Contacts from the data layer
+//        List<DVD> libraryList = dao.getLibrary();
+//        return libraryList;
+//    }
+//    
+
+    @RequestMapping(value = "/article/{id}", method = RequestMethod.GET)
+    @ResponseBody
+    public Article getArticle(@PathVariable("id") int id) {
+        // Retrieve the Contact associated with the given id and return it
+        return dao.getArticleByID(id);
+    }
+
+    @RequestMapping(value = {"/activeArticles"}, method = RequestMethod.GET)
+    @ResponseBody
+    public List<Article> getActiveArticles() {
+        List<Article> activeArticles = dao.getActiveArticles();
+        return activeArticles;
+
+    }
+
+    @RequestMapping(value = {"/articlesForReview"}, method = RequestMethod.GET)
+    @ResponseBody
+    public List<Article> getArticlesForReview() {
+        List<Article> articlesForReview = dao.getArticlesForReview();
+        return articlesForReview;
+
+    }
+    //      /removeDVD/{dvdId}
+    //"approve/"+articleID})
+
+    @RequestMapping(value = {"/approve"}, method = RequestMethod.POST)
+    @ResponseBody
+    public void approveArticle(@RequestBody Article article) {
+        dao.changeArticleStatus(1, article.getArticleID());
+        //return articlesForReview;
+
+    }
+
+    @RequestMapping(value = {"/hashtags"}, method = RequestMethod.POST)
+    @ResponseBody
+    public void addHashtags(@RequestBody Article article) {
+     //   article.
+   //     dao.addHashtags(article);
+    
+
+    }
+    
+    
+    @RequestMapping(value = {"/allHashtags"}, method = RequestMethod.GET)
+    @ResponseBody
+    public List <String> getAllHashtags() {
+
+        List<String> allHashtags = dao.getAllHashTags();
+        return allHashtags;
+    }
+    
+    @RequestMapping(value = "/search/{hashtag}", method = RequestMethod.GET)
+    @ResponseBody
+    public List<Article> searchArticles(@PathVariable("hashtag") String hashtag) {
+        List<Article> activeArticles = dao.searchByHashTag(hashtag);
+        return activeArticles;
+    }
+
 //@RequestMapping(value= {"/searchFragment"}, method = RequestMethod.GET)
 //@ResponseBody
 //public String showSearch(HttpServletRequest req){

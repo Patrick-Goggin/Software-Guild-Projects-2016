@@ -1,0 +1,58 @@
+Stories
+-----------------------------------------------------------------------------------------------------------------
+
+(Everyone)
+Summary: User is able to add a post
+Preconditions: Dao Implemented, wireframe implemented
+Postconditions: Module exists for admin to create new posts
+
+Summary: User is able to assign hashtags to to posts
+Preconditions: Add Post Functionality Implemented
+Postconditions: Posts have hashtags assigned to them
+
+Summary: User able to save a post
+Preconditions: Display post functionality, add post functionality
+Postconditions: Each blog post has the option of being saved
+
+
+(Patrick)
+Summary: User is able to view a post
+Preconditons: Add Post Functionality Implemented
+Postconditions: Pages are visible at their designated urls
+
+Summary: Admin is able to approve articles before they are posted
+Preconditions: Database is set up, Admin interface is set  up, Employee login funtionality, Post creation functionality
+Postconditions: Posts are not viewable until they are approved by the admin
+
+Summary: Admin is able to add static content to site
+Preconditions: Database is set up, Admin interface is set up, Post creation functionality, Page wireframes implemented
+Postconditions: Non-blog posts are visible on the site
+
+(Nick)
+
+Summary: User is able to edit a post
+Preconditions: Display Post Functionality Implemented, Add Post Functionality Implemented
+Postconditions: Link to Edit Module exists on each page
+
+Summary: User is able to share a post to social media
+Preconditions: Add Post Functionality Implemented,
+Postconditions: Each blog post page has a counter showing how many times it has been shared on social media
+
+Summary: User is able to search blog posts by hashtags
+Preconditions: Display Post functionality, Add Post Functionaly
+Postconditions: Site has a searchbar that can be used to find blog posts by hashtag
+
+
+(Dustin)
+
+Summary: Admin is able to evaluate new posts for Google Search Optimization
+Preconditions: Database is set up, Post Creation Functionality
+Postconditions: User recieves keyword suggestions before adding post
+
+Summary: Admin is able to schedule posts for upload and takedown
+Preconditions: Database is set up, Admin interface is set up, Post creation functionality, Article queue is implemented
+Postconditions: Posts are visible on the site for a pre-determined amount of time
+
+Summary: Admin is able to analyze traffic by hashtag
+Preconditions: Display Post Functionality, Add Post Functionality, Save Post Functionality, Hashtag Table in Database
+Postconditions: Hashtag traffic statistics are visible to the admin

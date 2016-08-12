@@ -1,12 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.capstoneblog.dto;
 
-import java.util.ArrayList;
+
 import java.util.Date;
+import java.util.HashSet;
 
 /**
  *
@@ -14,13 +10,15 @@ import java.util.Date;
  */
 public class Article {
     //private String content;
-    private ArrayList<String> hashtags = new ArrayList<>();
+    private String hashtags;
     private int articleID;
     private String articleBody;
     private Date postingDate;
     private Date takeDownDate;
-    private int status;
+    private int activeStatus;
     private boolean staticPage;
+    private String articleHead;
+   
     
     /**
      * @return the content
@@ -37,16 +35,16 @@ public class Article {
     }
 
     /**
-     * @return the hashtags
+     * @return the articleBody
      */
-    public ArrayList<String> getHashtags() {
+    public String getHashtags() {
         return hashtags;
     }
 
     /**
-     * @param hashtags the hashtags to set
+     * @param hashtags the articleBody to set
      */
-    public void setHashtags(ArrayList<String> hashtags) {
+    public void setHashtags(String hashtags) {
         this.hashtags = hashtags;
     }
 
@@ -93,17 +91,17 @@ public class Article {
     }
 
     /**
-     * @return the status
+     * @return the actuveStatus
      */
-    public int getStatus() {
-        return status;
+    public int getActiveStatus() {
+        return activeStatus;
     }
 
     /**
-     * @param status the status to set
+     * @param activeStatus the status to set
      */
-    public void setStatus(int status) {
-        this.status = status;
+    public void setActiveStatus(int activeStatus) {
+        this.activeStatus = activeStatus;
     }
 
     /**
@@ -119,4 +117,20 @@ public class Article {
     public void setStaticPage(boolean staticPage) {
         this.staticPage = staticPage;
     }
+
+    /**
+     * @return the articleHead
+     */
+    public String getArticleHead() {
+        return articleHead;
+    }
+
+    /**
+     * @param articleHead the articleHead to set
+     */
+    public void setArticleHead(String articleHead) {
+        this.articleHead = articleHead;
+    }
+
+
 }
